@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open Tech CFPs</title>
+  <meta name="description" content="Open calls for papers at tech conferences and meetups, refreshed every 3 hours.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Open Tech CFPs</h1>
+    <p>Calls for speakers at tech conferences and meetups. Refreshed every 3 hours. <span id="generated"></span></p>
+  </header>
+
+  <form id="filters" aria-label="Filters">
+    <label>Status
+      <select id="status">
+        <option value="open">Open</option>
+        <option value="upcoming">Not open yet</option>
+        <option value="closed">Closed</option>
+        <option value="">All</option>
+      </select>
+    </label>
+    <label>Tag <select id="tag"><option value="">Any</option></select></label>
+    <label>Country <select id="country"><option value="">Any</option></select></label>
+    <label>Search <input id="search" type="search" placeholder="Name or city"></label>
+  </form>
+
+  <p id="count" role="status" aria-live="polite">Loading…</p>
+
+  <main>
+    <table>
+      <thead>
+        <tr><th>Event</th><th>CFP closes</th><th>Event date</th><th>Where</th><th>Tags</th></tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </main>
+
+  <footer>
+    <p>
+      For LLMs and scripts: <a href="llms.txt">llms.txt</a>, <a href="api/open.json">open.json</a>,
+      <a href="api/open.md">open.md</a>, <a href="schema.json">schema</a>.
+      Source and tag rules on <a href="https://github.com/1kevgriff/OpenTechCFPs">GitHub</a>.
+      Data from <a href="https://sessionize.com">Sessionize</a>.
+    </p>
+  </footer>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
