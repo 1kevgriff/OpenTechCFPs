@@ -1,0 +1,112 @@
+:root {
+  color-scheme: light dark;
+  --text: light-dark(#1b1f24, #e6e8eb);
+  --muted: light-dark(#5b6470, #9aa4b0);
+  --surface: light-dark(#ffffff, #14171b);
+  --line: light-dark(#dfe3e8, #2b3138);
+  --accent: light-dark(#0b5cad, #7bb8f5);
+  --chip: light-dark(#eef2f6, #232930);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 72rem;
+  padding: 1.5rem 1rem 3rem;
+  background: var(--surface);
+  color: var(--text);
+  font: 1rem/1.5 system-ui, sans-serif;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+header p,
+footer,
+#count,
+small {
+  color: var(--muted);
+}
+
+a {
+  color: var(--accent);
+}
+
+#filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  margin: 1.25rem 0 0.5rem;
+}
+
+label {
+  display: grid;
+  gap: 0.2rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+select,
+input {
+  min-width: 10rem;
+  padding: 0.4rem 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 0.375rem;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+}
+
+main {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+th,
+td {
+  padding: 0.55rem 0.75rem 0.55rem 0;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+td:first-child {
+  min-width: 14rem;
+  font-weight: 600;
+}
+
+td small {
+  display: block;
+}
+
+.tag {
+  display: inline-block;
+  margin: 0 0.25rem 0.25rem 0;
+  padding: 0 0.45rem;
+  border-radius: 0.75rem;
+  background: var(--chip);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
